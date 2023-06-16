@@ -1,36 +1,46 @@
 import React from "react";
-
+import { useState } from "react";
 import styles from "./Register.module.css";
 
-const formParameters = [
-  { attribute: "name", label: "Nome", type: "text" },
-  { attribute: "email", label: "E-mail",  type: "email" },
-  { attribute: "cpf", label: "CPF",  type: "text" },
-  { attribute: "isInternal", label: "Estuda no IF?", type: "text" },
-  { attribute: "course", label: "Curso",  type: "password" },
-];
-
 const Register = () => {
+  const [student, setStudent] = useState({ name: "", email: "", cpf: "" });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(student)
+  }
+
   return (
     <div className={styles["register-container"]}>
-      <form>
-        {formParameters.map((parameter) => (
-          <label htmlFor={`${parameter.attribute}Input`}>{parameter.label}
-            {(() => {
-                switch(parameter.type) {
-                    case "text" :
-                        return <input id={`${parameter.attribute}Input`} type={parameter.type} />;
-                        case "text" :
-                        return <input id={`${parameter.attribute}Input`} type={parameter.type} />;
-                        case "text" :
-                        return <input id={`${parameter.attribute}Input`} type={parameter.type} />;
-
-                    default:
-                        return null;
-                }
-            })()}
-          </label>
-        ))}
+      <form onSubmit={(e)=>handleSubmit(e)}>
+        <label htmlFor="nameInput">
+          Nome
+          <input
+            id="nameInput"
+            value={student.name}
+            onChange={(e) => {setStudent({ ...student, name: e.target.value })}}
+            type="text"
+          />
+        </label>
+        <label htmlFor="emailInput">
+          Email
+          <input 
+          id="emailInput"
+          value={student.email}
+          onChange={(e) => {setStudent({...student, email: e.target.value })}} 
+          type="email" 
+          />
+        </label>
+        <label htmlFor="cpfInput">
+          CPF
+          <input 
+          id="cpfInput" 
+          value={student.cpf}
+          onChange={(e) => {setStudent({...student, cpf: e.target.value })}} 
+          type="text" 
+          />
+        </label>
+        <input type="submit" />
       </form>
     </div>
   );
