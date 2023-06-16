@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./Register.module.css";
+import Barcode from 'react-barcode';
 
 const Register = () => {
   const [student, setStudent] = useState({ name: "", email: "", cpf: "" });
@@ -13,6 +14,7 @@ const Register = () => {
   return (
     <div className={styles["register-container"]}>
       <form onSubmit={(e)=>handleSubmit(e)}>
+        <Barcode value={student.cpf}/>
         <label htmlFor="nameInput">
           Nome
           <input
