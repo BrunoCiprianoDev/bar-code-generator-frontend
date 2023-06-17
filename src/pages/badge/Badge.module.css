@@ -1,0 +1,47 @@
+.badge-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.badge-info {
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(211, 211, 211);
+}
+
+.badge-image {
+  border: 1px solid rgb(211, 211, 211);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10em;
+}
+
+.badge-data {
+  border: 1px solid rgb(211, 211, 211);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20em;
+}
+
+.badge-data div {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+}
+
+.field-label {
+  font-weight: bold;
+}
+
+.field-value {
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -1,0 +1,77 @@
+.register-container {
+    background: rgb(0, 27, 50);
+    background: linear-gradient(355deg, rgba(0, 27, 50, 1) 42%, rgba(167, 212, 255, 1) 43%, rgba(63, 157, 247, 1) 86%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3em;
+    box-shadow: 2px 1px 12px 0px rgba(0, 0, 0, 0.35);
+    padding: 2em;
+    width: 20em;
+    background-color: rgb(240, 239, 239);
+}
+
+.register-container label {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 90%;
+}
+
+.register-container input {
+    background: none;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2em;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+    border-style: none;
+}
+
+.register-container input:focus {
+    outline: none;
+}
+
+.register-container select {
+    background: none;
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2em;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+    border-style: none;
+}
+
+.register-container select:focus {
+    outline: none;
+}
+
+.register-container input[type='submit'] {
+    background-color: rgb(199, 199, 199);
+    border-radius: 2px;
+    padding: 0.5em 2em; /* Adapte os valores de padding conforme necessário */
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+}
+
+.register-container div input {
+    
+}
+
+
+.register-container div input[type='radio'] {
+    border: 1px dashed black;
+}
+
+.register-container input[type='radio'] {
+    box-shadow: none;    
+}
